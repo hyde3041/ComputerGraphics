@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\study\\2-2\\ComputerGraphics\\Project1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EB39EE68-212C-4ABA-BC9E-2F648D9614C1}|Project2\\Project2.vcxproj|C:\\study\\2-2\\ComputerGraphics\\Project1\\Project2\\Project2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EB39EE68-212C-4ABA-BC9E-2F648D9614C1}|Project2\\Project2.vcxproj|solutionrelative:Project2\\Project2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EB352B-F7D4-4192-989C-E7898E320833}|Project1\\Project1.vcxproj|C:\\study\\2-2\\ComputerGraphics\\Project1\\Project1\\Project1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{46EB352B-F7D4-4192-989C-E7898E320833}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Project1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Project2.cpp",
+              "DocumentMoniker": "C:\\study\\2-2\\ComputerGraphics\\Project1\\Project2\\Project2.cpp",
+              "RelativeDocumentMoniker": "Project2\\Project2.cpp",
+              "ToolTip": "C:\\study\\2-2\\ComputerGraphics\\Project1\\Project2\\Project2.cpp",
+              "RelativeToolTip": "Project2\\Project2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-02T11:45:32.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Project1.cpp",
+              "DocumentMoniker": "C:\\study\\2-2\\ComputerGraphics\\Project1\\Project1\\Project1.cpp",
+              "RelativeDocumentMoniker": "Project1\\Project1.cpp",
+              "ToolTip": "C:\\study\\2-2\\ComputerGraphics\\Project1\\Project1\\Project1.cpp",
+              "RelativeToolTip": "Project1\\Project1.cpp",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAQwLcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-01T05:20:42.142Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

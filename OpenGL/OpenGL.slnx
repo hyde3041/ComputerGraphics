@@ -1,0 +1,22 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
+    <BuildType Name="MinSizeRel" />
+    <BuildType Name="RelWithDebInfo" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Folder Name="/Project1/">
+    <Project Path="out/build/windows-x64/Project1-1.vcxproj" Id="128bb7fb-dfff-3f81-95cc-a0308924c265" />
+    <Project Path="out/build/windows-x64/Project1-2.vcxproj" Id="cc8ae3e7-afb7-3cce-ba34-d811e24945fa" />
+    <Project Path="out/build/windows-x64/Project1-3.vcxproj" Id="b42ddbdc-41b2-3bb1-87a7-6046e32548b5" />
+    <Project Path="out/build/windows-x64/Project1-4.vcxproj" Id="159db645-8fce-3262-8b56-e5e021013481" />
+  </Folder>
+  <Folder Name="/CMake/">
+    <Project Path="out/build/windows-x64/ZERO_CHECK.vcxproj" Id="4a3bfad9-2f87-3371-84aa-28471d04328f" />
+  </Folder>
+  <Folder Name="/Project2/">
+    <Project Path="out/build/windows-x64/Project2-1.vcxproj" Id="99614e88-ea6d-3a9e-8d33-df1523d84150" />
+    <Project Path="out/build/windows-x64/Project2-2.vcxproj" Id="d2027c7d-ae27-3e98-817f-3594615705df" />
+  </Folder>
+</Solution>

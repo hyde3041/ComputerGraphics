@@ -1,0 +1,10 @@
+{
+  "name": "opengl-practices",
+  "version-string": "1.0.0",
+  "dependencies": [
+    "glew",
+    "glfw3",
+    "glm"
+  ],
+  "builtin-baseline": "a1cae005c39be7b18ba319fced856b68d7276271"
+}

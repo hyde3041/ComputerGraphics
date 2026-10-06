@@ -8,15 +8,19 @@
   </Configurations>
   <Folder Name="/Project1/">
     <Project Path="out/build/windows-x64/Project1-1.vcxproj" Id="128bb7fb-dfff-3f81-95cc-a0308924c265" />
+    <Project Path="out/build/windows-x64/Project1-12.vcxproj" Id="cda43559-c9cb-35e6-90f3-3c0918a5ca18" />
     <Project Path="out/build/windows-x64/Project1-2.vcxproj" Id="cc8ae3e7-afb7-3cce-ba34-d811e24945fa" />
     <Project Path="out/build/windows-x64/Project1-3.vcxproj" Id="b42ddbdc-41b2-3bb1-87a7-6046e32548b5" />
     <Project Path="out/build/windows-x64/Project1-4.vcxproj" Id="159db645-8fce-3262-8b56-e5e021013481" />
+    <Project Path="out/build/windows-x64/Project1-5.vcxproj" Id="b8fb00c2-7aaa-36b4-b6ed-20939b6ff9f6" />
+    <Project Path="out/build/windows-x64/Project1-6.vcxproj" Id="28bd4ea2-47c6-3d3c-bb85-fcaa8b6f718a" />
+    <Project Path="out/build/windows-x64/Project1-7.vcxproj" Id="df00f3ff-cb90-3134-9cc4-87ae5d18ddb8" />
+    <Project Path="out/build/windows-x64/Project1-8.vcxproj" Id="2be6a0ab-fe5a-3cc4-8833-ca8e4b50b8d9" />
+    <Project Path="out/build/windows-x64/Project1-9.vcxproj" Id="7e7bdd50-4221-3990-b490-f6e08cdc96db" />
+    <Project Path="out/build/windows-x64/Project1-10.vcxproj" Id="46feaa00-7234-3a51-b87f-e9419a0eba01" />
+    <Project Path="out/build/windows-x64/Project1-11.vcxproj" Id="c1e0ee92-4b94-3751-8d4d-458532c4b4f5" />
   </Folder>
   <Folder Name="/CMake/">
     <Project Path="out/build/windows-x64/ZERO_CHECK.vcxproj" Id="4a3bfad9-2f87-3371-84aa-28471d04328f" />
-  </Folder>
-  <Folder Name="/Project2/">
-    <Project Path="out/build/windows-x64/Project2-1.vcxproj" Id="99614e88-ea6d-3a9e-8d33-df1523d84150" />
-    <Project Path="out/build/windows-x64/Project2-2.vcxproj" Id="d2027c7d-ae27-3e98-817f-3594615705df" />
   </Folder>
 </Solution>

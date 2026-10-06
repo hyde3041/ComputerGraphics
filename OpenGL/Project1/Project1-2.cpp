@@ -1,17 +1,197 @@
-// GLEW 헤더는 GLFW보다 먼저 포함한다.
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
 
-#include <cstdlib>
-#include <ctime>
 #include <iostream>
+#include <cstdlib>
+
+typedef class Rectangle {
+public:
+    GLclampf Red;
+    GLclampf Green;
+    GLclampf Blue;
+
+    GLfloat xPos1;
+    GLfloat yPos1;
+    GLfloat xPos2;
+    GLfloat yPos2;
+
+    int index{ -1 };
+    bool exist{ false };
+}Rectangle;
+
+int width;
+int height;
+
+Rectangle backGround[4];
+Rectangle smallRect[20];
+
+int count[4]{};
+int selectRect{ -1 };
+
+bool keyFlag[4]{};
+bool mouseFlag{ false };
+bool plusFlag{ false };
+bool minusFlag{ false };
+bool cFlag{ false };
+bool rFlag{ false };
+
+void framebufferSize(GLFWwindow* window, int width, int height) {
+    glViewport(0, 0, width, height);
+}
+
+void setColor(GLclampf* Red, GLclampf* Green, GLclampf* Blue) {
+    *Red = static_cast<GLclampf>(std::rand()) / RAND_MAX;
+    *Green = static_cast<GLclampf>(std::rand()) / RAND_MAX;
+    *Blue = static_cast<GLclampf>(std::rand()) / RAND_MAX;
+}
+
+void setPos(int Pos, GLfloat Size) {
+    if (count[Pos] >= 5) {
+        return;
+    }
+
+    int index = Pos * 5 + count[Pos];
+
+    GLfloat centerX;
+    GLfloat centerY;
+
+    if (Pos == 0) {
+        centerX = 0.5f;
+        centerY = 0.5f;
+    }
+    else if (Pos == 1) {
+        centerX = -0.5f;
+        centerY = 0.5f;
+    }
+    else if (Pos == 2) {
+        centerX = -0.5f;
+        centerY = -0.5f;
+    }
+    else {
+        centerX = 0.5f;
+        centerY = -0.5f;
+    }
+
+    smallRect[index].xPos1 = centerX - Size / 2.0f;
+    smallRect[index].yPos1 = centerY - Size / 2.0f;
+    smallRect[index].xPos2 = centerX + Size / 2.0f;
+    smallRect[index].yPos2 = centerY + Size / 2.0f;
+
+    setColor(&smallRect[index].Red, &smallRect[index].Green, &smallRect[index].Blue);
+
+    smallRect[index].index = index;
+    smallRect[index].exist = true;
+
+    ++count[Pos];
+}
+
+void firstRect() {
+    backGround[0].xPos1 = 0;
+    backGround[0].yPos1 = 0;
+    backGround[0].xPos2 = 1;
+    backGround[0].yPos2 = 1;
+
+    backGround[1].xPos1 = -1;
+    backGround[1].yPos1 = 0;
+    backGround[1].xPos2 = 0;
+    backGround[1].yPos2 = 1;
+
+    backGround[2].xPos1 = -1;
+    backGround[2].yPos1 = -1;
+    backGround[2].xPos2 = 0;
+    backGround[2].yPos2 = 0;
+
+    backGround[3].xPos1 = 0;
+    backGround[3].yPos1 = -1;
+    backGround[3].xPos2 = 1;
+    backGround[3].yPos2 = 0;
+
+    for (int i = 0; i < 4; ++i) {
+        setColor(&backGround[i].Red, &backGround[i].Green, &backGround[i].Blue);
+    }
+}
+
+void changeSize(int index, GLfloat size) {
+    if (index == -1) {
+        return;
+    }
+
+    GLfloat newX1 = smallRect[index].xPos1 - size;
+    GLfloat newY1 = smallRect[index].yPos1 - size;
+    GLfloat newX2 = smallRect[index].xPos2 + size;
+    GLfloat newY2 = smallRect[index].yPos2 + size;
+
+    if (newX2 - newX1 <= 0.1f || newY2 - newY1 <= 0.1f) {
+        return;
+    }
+
+    if (newX2 - newX1 >= 1.0f || newY2 - newY1 >= 1.0f) {
+        return;
+    }
+
+    smallRect[index].xPos1 = newX1;
+    smallRect[index].yPos1 = newY1;
+    smallRect[index].xPos2 = newX2;
+    smallRect[index].yPos2 = newY2;
+}
+
+void resetRect() {
+    for (int i = 0; i < 20; ++i) {
+        smallRect[i] = Rectangle();
+    }
+
+    for (int i = 0; i < 4; ++i) {
+        count[i] = 0;
+        setColor(&backGround[i].Red, &backGround[i].Green, &backGround[i].Blue);
+    }
+
+    selectRect = -1;
+}
+
+void drawRect(Rectangle* Rect) {
+    glColor3f(Rect->Red, Rect->Green, Rect->Blue);
+    glRectf(Rect->xPos1, Rect->yPos1, Rect->xPos2, Rect->yPos2);
+
+    if (selectRect != -1 && Rect->index == selectRect) {
+        glColor3f(1.0f, 1.0f, 1.0f);
+        glLineWidth(4.0f);
+
+        glBegin(GL_LINE_LOOP);
+        glVertex2f(Rect->xPos1, Rect->yPos1);
+        glVertex2f(Rect->xPos2, Rect->yPos1);
+        glVertex2f(Rect->xPos2, Rect->yPos2);
+        glVertex2f(Rect->xPos1, Rect->yPos2);
+        glEnd();
+    }
+}
+
+void selectRectangle(GLFWwindow* window) {
+    double mouseX;
+    double mouseY;
+
+    glfwGetCursorPos(window, &mouseX, &mouseY);
+    glfwGetWindowSize(window, &width, &height);
+
+    GLfloat x = static_cast<GLfloat>(mouseX / width * 2.0 - 1.0);
+    GLfloat y = static_cast<GLfloat>(1.0 - mouseY / height * 2.0);
+
+    selectRect = -1;
+
+    for (int i = 19; i >= 0; --i) {
+        if (smallRect[i].exist == false) {
+            continue;
+        }
+
+        if (x >= smallRect[i].xPos1 && x <= smallRect[i].xPos2 &&
+            y >= smallRect[i].yPos1 && y <= smallRect[i].yPos2) {
+            selectRect = smallRect[i].index;
+            break;
+        }
+    }
+}
 
 int main()
 {
-    // 난수 생성기가 실행할 때마다 다른 값을 만들도록 초기화
-    std::srand(static_cast<unsigned int>(std::time(nullptr)));
-
     if (glfwInit() != GLFW_TRUE) {
         std::cerr << "GLFW initialization failed.\n";
         return -1;
@@ -22,6 +202,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
 
     GLFWwindow* window = glfwCreateWindow(800, 600, "Project1-2", nullptr, nullptr);
+
     if (window == nullptr) {
         std::cerr << "Window creation failed.\n";
         glfwTerminate();
@@ -29,8 +210,8 @@ int main()
     }
 
     glfwMakeContextCurrent(window);
-
     glewExperimental = GL_TRUE;
+
     if (glewInit() != GLEW_OK) {
         std::cerr << "GLEW initialization failed.\n";
         glfwDestroyWindow(window);
@@ -39,46 +220,108 @@ int main()
     }
 
     glViewport(0, 0, 800, 600);
+    glfwSetFramebufferSizeCallback(window, framebufferSize);
+    glClearColor(0.0F, 0.0F, 0.0F, 1.0F);
 
-    // 최초 배경색은 흰색
-    glm::vec3 backgroundColor(1.0F, 1.0F, 1.0F);
-    int previousAState = GLFW_RELEASE;
+    firstRect();
 
     while (glfwWindowShouldClose(window) == GLFW_FALSE) {
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
             glfwSetWindowShouldClose(window, GLFW_TRUE);
         }
 
-        // C: 청록색, M: 자홍색, Y: 노란색
+        int key[4]{
+            GLFW_KEY_1,
+            GLFW_KEY_2,
+            GLFW_KEY_3,
+            GLFW_KEY_4
+        };
+
+        for (int i = 0; i < 4; ++i) {
+            if (glfwGetKey(window, key[i]) == GLFW_PRESS) {
+                if (keyFlag[i] == false) {
+                    GLfloat size = 0.2f + static_cast<GLfloat>(std::rand()) / RAND_MAX * 0.3f;
+                    setPos(i, size);
+                    keyFlag[i] = true;
+                }
+            }
+            else {
+                keyFlag[i] = false;
+            }
+        }
+
+        if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
+            if (mouseFlag == false) {
+                selectRectangle(window);
+                mouseFlag = true;
+            }
+        }
+        else {
+            mouseFlag = false;
+        }
+        if (glfwGetKey(window, GLFW_KEY_EQUAL) == GLFW_PRESS ||
+            glfwGetKey(window, GLFW_KEY_KP_ADD) == GLFW_PRESS) {
+            if (plusFlag == false) {
+                changeSize(selectRect, 0.05f);
+                plusFlag = true;
+            }
+        }
+        else {
+            plusFlag = false;
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_MINUS) == GLFW_PRESS ||
+            glfwGetKey(window, GLFW_KEY_KP_SUBTRACT) == GLFW_PRESS) {
+            if (minusFlag == false) {
+                changeSize(selectRect, -0.05f);
+                minusFlag = true;
+            }
+        }
+        else {
+            minusFlag = false;
+        }
+
         if (glfwGetKey(window, GLFW_KEY_C) == GLFW_PRESS) {
-            backgroundColor = glm::vec3(0.0F, 1.0F, 1.0F);
+            if (cFlag == false) {
+                if (selectRect != -1) {
+                    setColor(&smallRect[selectRect].Red,
+                        &smallRect[selectRect].Green,
+                        &smallRect[selectRect].Blue);
+                }
+                cFlag = true;
+            }
         }
-        if (glfwGetKey(window, GLFW_KEY_M) == GLFW_PRESS) {
-            backgroundColor = glm::vec3(1.0F, 0.0F, 1.0F);
-        }
-        if (glfwGetKey(window, GLFW_KEY_Y) == GLFW_PRESS) {
-            backgroundColor = glm::vec3(1.0F, 1.0F, 0.0F);
-        }
-
-        // G: 회색, K: 검정색
-        if (glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS) {
-            backgroundColor = glm::vec3(0.5F, 0.5F, 0.5F);
-        }
-        if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS) {
-            backgroundColor = glm::vec3(0.0F, 0.0F, 0.0F);
+        else {
+            cFlag = false;
         }
 
-        // A 키를 새로 눌렀을 때만 한 번 랜덤색으로 변경
-        const int currentAState = glfwGetKey(window, GLFW_KEY_A);
-        if (currentAState == GLFW_PRESS && previousAState == GLFW_RELEASE) {
-            backgroundColor.r = static_cast<float>(std::rand()) / RAND_MAX;
-            backgroundColor.g = static_cast<float>(std::rand()) / RAND_MAX;
-            backgroundColor.b = static_cast<float>(std::rand()) / RAND_MAX;
+        if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
+            if (rFlag == false) {
+                resetRect();
+                rFlag = true;
+            }
         }
-        previousAState = currentAState;
+        else {
+            rFlag = false;
+        }
 
-        glClearColor(backgroundColor.r, backgroundColor.g, backgroundColor.b, 1.0F);
+        if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS) {
+            glfwSetWindowShouldClose(window, GLFW_TRUE);
+        }
+
+        glfwGetWindowSize(window, &width, &height);
+
         glClear(GL_COLOR_BUFFER_BIT);
+
+        for (int i = 0; i < 4; ++i) {
+            drawRect(&backGround[i]);
+        }
+
+        for (int i = 0; i < 20; ++i) {
+            if (smallRect[i].exist) {
+                drawRect(&smallRect[i]);
+            }
+        }
 
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -86,5 +329,6 @@ int main()
 
     glfwDestroyWindow(window);
     glfwTerminate();
+
     return 0;
 }

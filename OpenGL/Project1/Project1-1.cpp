@@ -4,6 +4,19 @@
 
 #include <iostream>
 
+GLclampf Red;
+GLclampf Green;
+GLclampf Blue;
+
+bool timerOn = false;
+double lastTime = 0.0;
+
+void setRandColor() {
+    Red = static_cast<GLclampf>(std::rand()) / RAND_MAX;
+    Green = static_cast<GLclampf>(std::rand()) / RAND_MAX;
+    Blue = static_cast<GLclampf>(std::rand()) / RAND_MAX;
+}
+
 int main()
 {
     // GLFW 초기화
@@ -43,12 +56,53 @@ int main()
     // 윈도우가 닫힐 때까지 반복
     while (glfwWindowShouldClose(window) == GLFW_FALSE) {
         // Esc 키를 누르면 프로그램 종료
+
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
             glfwSetWindowShouldClose(window, GLFW_TRUE);
         }
+        else if (glfwGetKey(window, GLFW_KEY_C) == GLFW_PRESS) {
+            glClearColor(0.0F, 1.0F, 1.0F, 1.0F);
+        }
+        else if (glfwGetKey(window, GLFW_KEY_M) == GLFW_PRESS) {
+            glClearColor(1.0F, 0.0F, 1.0F, 1.0F);
+        }
+        else if (glfwGetKey(window, GLFW_KEY_Y) == GLFW_PRESS) {
+            glClearColor(1.0F, 1.0F, 0.0F, 1.0F);
+        }
+        else if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+            setRandColor();
+            glClearColor(Red, Green, Blue, 1.0F);
+        }
+        else if (glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS) {
+            glClearColor(0.5F, 0.5F, 0.5F, 1.0F);
+        }
+        else if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS) {
+            glClearColor(0.0F, 0.0F, 0.0F, 1.0F);
+        }
+        else if (glfwGetKey(window, GLFW_KEY_T) == GLFW_PRESS) {
+            timerOn = true;
+            lastTime = glfwGetTime();
+        }
 
-        // 배경을 흰색으로 지우기
-        glClearColor(1.0F, 1.0F, 1.0F, 1.0F);
+        // S : 타이머 정지
+        else if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+            timerOn = false;
+        }
+        
+        if (timerOn) {
+
+            double currentTime = glfwGetTime();
+
+            // 1초가 지났다면
+            if (currentTime - lastTime >= 1.0) {
+
+                setRandColor();
+                glClearColor(Red, Green, Blue, 1.0F);
+
+                lastTime = currentTime;
+            }
+        }
+
         glClear(GL_COLOR_BUFFER_BIT);
 
         // 완성된 화면을 표시하고 입력 이벤트 확인

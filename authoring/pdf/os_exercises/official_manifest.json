@@ -1,0 +1,164 @@
+{
+  "repo": "remzi-arpacidusseau/ostep-homework",
+  "ref": "afb36ca8ddbf81d847d18f6bd18a87f0a18667f2",
+  "files": [
+    {
+      "path": "cpu-intro/process-run.py",
+      "sha": "24d301b7bacce8f3d05a9a1b3d78ee984b8635d0",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/cpu-intro/process-run.py",
+      "bytes": 13351,
+      "imports": [
+        "from __future__ import print_function",
+        "import sys",
+        "from optparse import OptionParser",
+        "import random"
+      ],
+      "dangerous": null
+    },
+    {
+      "path": "cpu-sched/scheduler.py",
+      "sha": "ceccb30caf880ed079ea740dca480806d704f345",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/cpu-sched/scheduler.py",
+      "bytes": 5842,
+      "imports": [
+        "from __future__ import print_function",
+        "import sys",
+        "from optparse import OptionParser",
+        "import random",
+        "import operator"
+      ],
+      "dangerous": null
+    },
+    {
+      "path": "cpu-sched-mlfq/mlfq.py",
+      "sha": "af37a8f5364b48834eaf16a9ab885ca48ef0ac51",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/cpu-sched-mlfq/mlfq.py",
+      "bytes": 14393,
+      "imports": [
+        "from __future__ import print_function",
+        "import sys",
+        "from optparse import OptionParser",
+        "import random"
+      ],
+      "dangerous": null
+    },
+    {
+      "path": "cpu-sched-lottery/lottery.py",
+      "sha": "fa314a3427ed1f89db3dbb086070467a9642f7aa",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/cpu-sched-lottery/lottery.py",
+      "bytes": 4333,
+      "imports": [
+        "from __future__ import print_function",
+        "import sys",
+        "from optparse import OptionParser",
+        "import random",
+        "import operator"
+      ],
+      "dangerous": null
+    },
+    {
+      "path": "cpu-sched-multi/multi.py",
+      "sha": "489a87fa7eb35be5933d3e731f28171e6fee79e6",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/cpu-sched-multi/multi.py",
+      "bytes": 22629,
+      "imports": [
+        "from __future__ import print_function",
+        "from collections import *",
+        "from optparse import OptionParser",
+        "import random"
+      ],
+      "dangerous": null
+    },
+    {
+      "path": "vm-mechanism/relocation.py",
+      "sha": "8bffb84f6272232a5793701953898afe95371e66",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/vm-mechanism/relocation.py",
+      "bytes": 4150,
+      "imports": [
+        "from __future__ import print_function",
+        "import sys",
+        "from optparse import OptionParser",
+        "import random",
+        "import math"
+      ],
+      "dangerous": null
+    },
+    {
+      "path": "vm-segmentation/segmentation.py",
+      "sha": "092a0412cc4c6a77d267d0d84ed684d877d03c94",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/vm-segmentation/segmentation.py",
+      "bytes": 7033,
+      "imports": [
+        "from __future__ import print_function",
+        "import sys",
+        "from optparse import OptionParser",
+        "import random",
+        "import math"
+      ],
+      "dangerous": null
+    },
+    {
+      "path": "vm-freespace/malloc.py",
+      "sha": "0e2a269433246feecfa8872607272c4f7fe88cf8",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/vm-freespace/malloc.py",
+      "bytes": 10182,
+      "imports": [
+        "from __future__ import print_function",
+        "import random",
+        "from optparse import OptionParser"
+      ],
+      "dangerous": null
+    },
+    {
+      "path": "vm-paging/paging-linear-translate.py",
+      "sha": "5a1e8dc7faeb0cfeedfee3924a44fdaa5919bed4",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/vm-paging/paging-linear-translate.py",
+      "bytes": 6801,
+      "imports": [
+        "from __future__ import print_function",
+        "import sys",
+        "from optparse import OptionParser",
+        "import random",
+        "import math",
+        "import array"
+      ],
+      "dangerous": null
+    },
+    {
+      "path": "vm-smalltables/paging-multilevel-translate.py",
+      "sha": "305045d71b9011c53fbb91f856d6684a822f4fa6",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/vm-smalltables/paging-multilevel-translate.py",
+      "bytes": 9261,
+      "imports": [
+        "from __future__ import print_function",
+        "import sys",
+        "from optparse import OptionParser",
+        "import random",
+        "import math"
+      ],
+      "dangerous": null
+    },
+    {
+      "path": "vm-beyondphys-policy/paging-policy.py",
+      "sha": "4f8eca5f0df51470e8a6fde4f4f86a598b80cedb",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/vm-beyondphys-policy/paging-policy.py",
+      "bytes": 10822,
+      "imports": [
+        "from __future__ import print_function",
+        "import sys",
+        "from optparse import OptionParser",
+        "import random",
+        "import math"
+      ],
+      "dangerous": null
+    },
+    {
+      "path": "vm-beyondphys/mem.c",
+      "sha": "5d303ed6414e85d30399fb24f7510fa10449557e",
+      "url": "https://github.com/remzi-arpacidusseau/ostep-homework/blob/afb36ca8ddbf81d847d18f6bd18a87f0a18667f2/vm-beyondphys/mem.c",
+      "bytes": 1945,
+      "imports": null,
+      "dangerous": null
+    }
+  ]
+}

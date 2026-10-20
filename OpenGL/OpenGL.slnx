@@ -8,7 +8,6 @@
   </Configurations>
   <Folder Name="/Project1/">
     <Project Path="out/build/windows-x64/Project1-1.vcxproj" Id="128bb7fb-dfff-3f81-95cc-a0308924c265" />
-    <Project Path="out/build/windows-x64/Project1-12.vcxproj" Id="cda43559-c9cb-35e6-90f3-3c0918a5ca18" />
     <Project Path="out/build/windows-x64/Project1-2.vcxproj" Id="cc8ae3e7-afb7-3cce-ba34-d811e24945fa" />
     <Project Path="out/build/windows-x64/Project1-3.vcxproj" Id="b42ddbdc-41b2-3bb1-87a7-6046e32548b5" />
     <Project Path="out/build/windows-x64/Project1-4.vcxproj" Id="159db645-8fce-3262-8b56-e5e021013481" />
@@ -19,6 +18,19 @@
     <Project Path="out/build/windows-x64/Project1-9.vcxproj" Id="7e7bdd50-4221-3990-b490-f6e08cdc96db" />
     <Project Path="out/build/windows-x64/Project1-10.vcxproj" Id="46feaa00-7234-3a51-b87f-e9419a0eba01" />
     <Project Path="out/build/windows-x64/Project1-11.vcxproj" Id="c1e0ee92-4b94-3751-8d4d-458532c4b4f5" />
+    <Project Path="out/build/windows-x64/Project1-12.vcxproj" Id="cda43559-c9cb-35e6-90f3-3c0918a5ca18" />
+    <Project Path="out/build/windows-x64/Project1-13.vcxproj" Id="a4081a14-dcb1-3d92-89b7-16b0b70658a8" />
+    <Project Path="out/build/windows-x64/Project1-14.vcxproj" Id="6518775f-2959-3503-b19a-73eadf54b9c5" />
+    <Project Path="out/build/windows-x64/Project1-15.vcxproj" Id="9c7729ad-c81b-3af2-a3fb-67b9c7d772b7" />
+    <Project Path="out/build/windows-x64/Project1-16.vcxproj" Id="ff867ecb-e6fd-38ec-abdd-1baa72d19de2">
+      <Build Solution="Debug|*" Project="false" />
+      <Build Solution="Release|*" Project="false" />
+      <Build Solution="MinSizeRel|*" Project="false" />
+      <Build Solution="RelWithDebInfo|*" Project="false" />
+    </Project>
+    <Project Path="out/build/windows-x64/Project1-17.vcxproj" Id="5ad8d5e1-cfc9-3183-b94e-cc560c73f7d1" />
+    <Project Path="out/build/windows-x64/Project1-18.vcxproj" Id="aeb6917d-b83f-3deb-b215-a363d44fc436" />
+    <Project Path="out/build/windows-x64/Project1-19.vcxproj" Id="7e95a184-9bb9-38ca-9ffb-959a17362e6b" />
   </Folder>
   <Folder Name="/CMake/">
     <Project Path="out/build/windows-x64/ZERO_CHECK.vcxproj" Id="4a3bfad9-2f87-3371-84aa-28471d04328f" />

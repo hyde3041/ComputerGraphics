@@ -1,0 +1,1395 @@
+{
+  "output": "C:\\study\\2-2\\ComputerGraphics\\output\\pdf\\운영체제_핵심요약_문제_정답해설.pdf",
+  "pages": 92,
+  "questions": 105,
+  "numbered_questions": 103,
+  "measurement_tasks": 2,
+  "chapters": [
+    {
+      "id": "02",
+      "title": "운영체제 개요",
+      "summary_start": 3,
+      "question_start": null,
+      "answer_start": null
+    },
+    {
+      "id": "04",
+      "title": "프로세스",
+      "summary_start": 4,
+      "question_start": 5,
+      "answer_start": 7
+    },
+    {
+      "id": "05",
+      "title": "프로세스 API",
+      "summary_start": 9,
+      "question_start": 10,
+      "answer_start": 12
+    },
+    {
+      "id": "06",
+      "title": "제한적 직접 실행",
+      "summary_start": 17,
+      "question_start": 18,
+      "answer_start": 20
+    },
+    {
+      "id": "07",
+      "title": "CPU 스케줄링 기본",
+      "summary_start": 22,
+      "question_start": 23,
+      "answer_start": 24
+    },
+    {
+      "id": "08",
+      "title": "멀티 레벨 피드백 큐",
+      "summary_start": 26,
+      "question_start": 27,
+      "answer_start": 28
+    },
+    {
+      "id": "09",
+      "title": "비례 배분과 CFS",
+      "summary_start": 30,
+      "question_start": 31,
+      "answer_start": 32
+    },
+    {
+      "id": "10",
+      "title": "멀티프로세서 스케줄링",
+      "summary_start": 34,
+      "question_start": 35,
+      "answer_start": 37
+    },
+    {
+      "id": "13",
+      "title": "주소 공간",
+      "summary_start": 39,
+      "question_start": 40,
+      "answer_start": 41
+    },
+    {
+      "id": "14",
+      "title": "메모리 API",
+      "summary_start": 43,
+      "question_start": 44,
+      "answer_start": 46
+    },
+    {
+      "id": "15",
+      "title": "주소 변환의 원리",
+      "summary_start": 49,
+      "question_start": 50,
+      "answer_start": 51
+    },
+    {
+      "id": "16",
+      "title": "세그멘테이션",
+      "summary_start": 53,
+      "question_start": 54,
+      "answer_start": 55
+    },
+    {
+      "id": "17",
+      "title": "빈 공간 관리",
+      "summary_start": 57,
+      "question_start": 58,
+      "answer_start": 59
+    },
+    {
+      "id": "18",
+      "title": "페이징",
+      "summary_start": 62,
+      "question_start": 63,
+      "answer_start": 65
+    },
+    {
+      "id": "19",
+      "title": "TLB",
+      "summary_start": 67,
+      "question_start": 68,
+      "answer_start": 71
+    },
+    {
+      "id": "20",
+      "title": "더 작은 페이지 테이블",
+      "summary_start": 74,
+      "question_start": 75,
+      "answer_start": 76
+    },
+    {
+      "id": "21",
+      "title": "스왑 메커니즘",
+      "summary_start": 78,
+      "question_start": 79,
+      "answer_start": 81
+    },
+    {
+      "id": "22",
+      "title": "페이지 교체 정책",
+      "summary_start": 83,
+      "question_start": 84,
+      "answer_start": 85
+    },
+    {
+      "id": "23",
+      "title": "VAX/VMS·Linux 가상 메모리",
+      "summary_start": 88,
+      "question_start": null,
+      "answer_start": null
+    }
+  ],
+  "anchors": [
+    {
+      "chapter": "04",
+      "n": 1,
+      "page": 7
+    },
+    {
+      "chapter": "04",
+      "n": 2,
+      "page": 7
+    },
+    {
+      "chapter": "04",
+      "n": 3,
+      "page": 7
+    },
+    {
+      "chapter": "04",
+      "n": 4,
+      "page": 7
+    },
+    {
+      "chapter": "04",
+      "n": 5,
+      "page": 7
+    },
+    {
+      "chapter": "04",
+      "n": 6,
+      "page": 7
+    },
+    {
+      "chapter": "04",
+      "n": 7,
+      "page": 7
+    },
+    {
+      "chapter": "04",
+      "n": 8,
+      "page": 8
+    },
+    {
+      "chapter": "05",
+      "n": 1,
+      "page": 12
+    },
+    {
+      "chapter": "05",
+      "n": 2,
+      "page": 12
+    },
+    {
+      "chapter": "05",
+      "n": 3,
+      "page": 13
+    },
+    {
+      "chapter": "05",
+      "n": 4,
+      "page": 13
+    },
+    {
+      "chapter": "05",
+      "n": 5,
+      "page": 14
+    },
+    {
+      "chapter": "05",
+      "n": 6,
+      "page": 14
+    },
+    {
+      "chapter": "05",
+      "n": 7,
+      "page": 15
+    },
+    {
+      "chapter": "05",
+      "n": 8,
+      "page": 15
+    },
+    {
+      "chapter": "06",
+      "n": 1,
+      "page": 20
+    },
+    {
+      "chapter": "06",
+      "n": 2,
+      "page": 20
+    },
+    {
+      "chapter": "07",
+      "n": 1,
+      "page": 24
+    },
+    {
+      "chapter": "07",
+      "n": 2,
+      "page": 24
+    },
+    {
+      "chapter": "07",
+      "n": 3,
+      "page": 24
+    },
+    {
+      "chapter": "07",
+      "n": 4,
+      "page": 24
+    },
+    {
+      "chapter": "07",
+      "n": 5,
+      "page": 24
+    },
+    {
+      "chapter": "07",
+      "n": 6,
+      "page": 25
+    },
+    {
+      "chapter": "07",
+      "n": 7,
+      "page": 25
+    },
+    {
+      "chapter": "08",
+      "n": 1,
+      "page": 28
+    },
+    {
+      "chapter": "08",
+      "n": 2,
+      "page": 28
+    },
+    {
+      "chapter": "08",
+      "n": 3,
+      "page": 28
+    },
+    {
+      "chapter": "08",
+      "n": 4,
+      "page": 29
+    },
+    {
+      "chapter": "08",
+      "n": 5,
+      "page": 29
+    },
+    {
+      "chapter": "08",
+      "n": 6,
+      "page": 29
+    },
+    {
+      "chapter": "09",
+      "n": 1,
+      "page": 32
+    },
+    {
+      "chapter": "09",
+      "n": 2,
+      "page": 32
+    },
+    {
+      "chapter": "09",
+      "n": 3,
+      "page": 32
+    },
+    {
+      "chapter": "09",
+      "n": 4,
+      "page": 32
+    },
+    {
+      "chapter": "09",
+      "n": 5,
+      "page": 33
+    },
+    {
+      "chapter": "10",
+      "n": 1,
+      "page": 37
+    },
+    {
+      "chapter": "10",
+      "n": 2,
+      "page": 37
+    },
+    {
+      "chapter": "10",
+      "n": 3,
+      "page": 37
+    },
+    {
+      "chapter": "10",
+      "n": 4,
+      "page": 37
+    },
+    {
+      "chapter": "10",
+      "n": 5,
+      "page": 37
+    },
+    {
+      "chapter": "10",
+      "n": 6,
+      "page": 37
+    },
+    {
+      "chapter": "10",
+      "n": 7,
+      "page": 37
+    },
+    {
+      "chapter": "10",
+      "n": 8,
+      "page": 38
+    },
+    {
+      "chapter": "10",
+      "n": 9,
+      "page": 38
+    },
+    {
+      "chapter": "13",
+      "n": 1,
+      "page": 41
+    },
+    {
+      "chapter": "13",
+      "n": 2,
+      "page": 41
+    },
+    {
+      "chapter": "13",
+      "n": 3,
+      "page": 41
+    },
+    {
+      "chapter": "13",
+      "n": 4,
+      "page": 42
+    },
+    {
+      "chapter": "13",
+      "n": 5,
+      "page": 42
+    },
+    {
+      "chapter": "13",
+      "n": 6,
+      "page": 42
+    },
+    {
+      "chapter": "13",
+      "n": 7,
+      "page": 42
+    },
+    {
+      "chapter": "13",
+      "n": 8,
+      "page": 42
+    },
+    {
+      "chapter": "14",
+      "n": 1,
+      "page": 46
+    },
+    {
+      "chapter": "14",
+      "n": 2,
+      "page": 46
+    },
+    {
+      "chapter": "14",
+      "n": 3,
+      "page": 46
+    },
+    {
+      "chapter": "14",
+      "n": 4,
+      "page": 46
+    },
+    {
+      "chapter": "14",
+      "n": 5,
+      "page": 47
+    },
+    {
+      "chapter": "14",
+      "n": 6,
+      "page": 47
+    },
+    {
+      "chapter": "14",
+      "n": 7,
+      "page": 47
+    },
+    {
+      "chapter": "14",
+      "n": 8,
+      "page": 47
+    },
+    {
+      "chapter": "14",
+      "n": 9,
+      "page": 48
+    },
+    {
+      "chapter": "15",
+      "n": 1,
+      "page": 51
+    },
+    {
+      "chapter": "15",
+      "n": 2,
+      "page": 51
+    },
+    {
+      "chapter": "15",
+      "n": 3,
+      "page": 52
+    },
+    {
+      "chapter": "15",
+      "n": 4,
+      "page": 52
+    },
+    {
+      "chapter": "15",
+      "n": 5,
+      "page": 52
+    },
+    {
+      "chapter": "16",
+      "n": 1,
+      "page": 55
+    },
+    {
+      "chapter": "16",
+      "n": 2,
+      "page": 55
+    },
+    {
+      "chapter": "16",
+      "n": 3,
+      "page": 56
+    },
+    {
+      "chapter": "16",
+      "n": 4,
+      "page": 56
+    },
+    {
+      "chapter": "16",
+      "n": 5,
+      "page": 56
+    },
+    {
+      "chapter": "17",
+      "n": 1,
+      "page": 59
+    },
+    {
+      "chapter": "17",
+      "n": 2,
+      "page": 59
+    },
+    {
+      "chapter": "17",
+      "n": 3,
+      "page": 59
+    },
+    {
+      "chapter": "17",
+      "n": 4,
+      "page": 60
+    },
+    {
+      "chapter": "17",
+      "n": 5,
+      "page": 60
+    },
+    {
+      "chapter": "17",
+      "n": 6,
+      "page": 60
+    },
+    {
+      "chapter": "17",
+      "n": 7,
+      "page": 61
+    },
+    {
+      "chapter": "18",
+      "n": 1,
+      "page": 65
+    },
+    {
+      "chapter": "18",
+      "n": 2,
+      "page": 65
+    },
+    {
+      "chapter": "18",
+      "n": 3,
+      "page": 65
+    },
+    {
+      "chapter": "18",
+      "n": 4,
+      "page": 66
+    },
+    {
+      "chapter": "19",
+      "n": 1,
+      "page": 71
+    },
+    {
+      "chapter": "19",
+      "n": 2,
+      "page": 71
+    },
+    {
+      "chapter": "19",
+      "n": 3,
+      "page": 72
+    },
+    {
+      "chapter": "19",
+      "n": 4,
+      "page": 72
+    },
+    {
+      "chapter": "19",
+      "n": 5,
+      "page": 72
+    },
+    {
+      "chapter": "19",
+      "n": 6,
+      "page": 72
+    },
+    {
+      "chapter": "19",
+      "n": 7,
+      "page": 73
+    },
+    {
+      "chapter": "20",
+      "n": 1,
+      "page": 76
+    },
+    {
+      "chapter": "20",
+      "n": 2,
+      "page": 76
+    },
+    {
+      "chapter": "20",
+      "n": 3,
+      "page": 77
+    },
+    {
+      "chapter": "21",
+      "n": 1,
+      "page": 81
+    },
+    {
+      "chapter": "21",
+      "n": 2,
+      "page": 81
+    },
+    {
+      "chapter": "21",
+      "n": 3,
+      "page": 81
+    },
+    {
+      "chapter": "21",
+      "n": 4,
+      "page": 81
+    },
+    {
+      "chapter": "21",
+      "n": 5,
+      "page": 81
+    },
+    {
+      "chapter": "21",
+      "n": 6,
+      "page": 82
+    },
+    {
+      "chapter": "21",
+      "n": 7,
+      "page": 82
+    },
+    {
+      "chapter": "22",
+      "n": 1,
+      "page": 85
+    },
+    {
+      "chapter": "22",
+      "n": 2,
+      "page": 85
+    },
+    {
+      "chapter": "22",
+      "n": 3,
+      "page": 85
+    },
+    {
+      "chapter": "22",
+      "n": 4,
+      "page": 86
+    },
+    {
+      "chapter": "22",
+      "n": 5,
+      "page": 86
+    }
+  ],
+  "page_meta": [
+    {
+      "kind": "front",
+      "chapter": null,
+      "source": []
+    },
+    {
+      "kind": "front",
+      "chapter": null,
+      "source": []
+    },
+    {
+      "kind": "summary",
+      "chapter": "02",
+      "source": [
+        1,
+        17
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "04",
+      "source": [
+        18,
+        30
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "04",
+      "source": [
+        28,
+        28
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "04",
+      "source": [
+        29,
+        29
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "04",
+      "source": [
+        18,
+        30
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "04",
+      "source": [
+        18,
+        30
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "05",
+      "source": [
+        31,
+        41
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "05",
+      "source": [
+        40,
+        40
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "05",
+      "source": [
+        41,
+        41
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "05",
+      "source": [
+        31,
+        41
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "05",
+      "source": [
+        31,
+        41
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "05",
+      "source": [
+        31,
+        41
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "05",
+      "source": [
+        31,
+        41
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "05",
+      "source": [
+        31,
+        41
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "06",
+      "source": [
+        42,
+        57
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "06",
+      "source": [
+        56,
+        56
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "06",
+      "source": [
+        57,
+        57
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "06",
+      "source": [
+        42,
+        57
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "06",
+      "source": [
+        42,
+        57
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "07",
+      "source": [
+        58,
+        71
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "07",
+      "source": [
+        71,
+        71
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "07",
+      "source": [
+        58,
+        71
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "07",
+      "source": [
+        58,
+        71
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "08",
+      "source": [
+        72,
+        83
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "08",
+      "source": [
+        83,
+        83
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "08",
+      "source": [
+        72,
+        83
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "08",
+      "source": [
+        72,
+        83
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "09",
+      "source": [
+        84,
+        97
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "09",
+      "source": [
+        92,
+        92
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "09",
+      "source": [
+        84,
+        97
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "09",
+      "source": [
+        84,
+        97
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "10",
+      "source": [
+        98,
+        111
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "10",
+      "source": [
+        110,
+        110
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "10",
+      "source": [
+        111,
+        111
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "10",
+      "source": [
+        98,
+        111
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "10",
+      "source": [
+        98,
+        111
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "13",
+      "source": [
+        112,
+        122
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "13",
+      "source": [
+        122,
+        122
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "13",
+      "source": [
+        112,
+        122
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "13",
+      "source": [
+        112,
+        122
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "14",
+      "source": [
+        123,
+        133
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "14",
+      "source": [
+        132,
+        132
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "14",
+      "source": [
+        133,
+        133
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "14",
+      "source": [
+        123,
+        133
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "14",
+      "source": [
+        123,
+        133
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "14",
+      "source": [
+        123,
+        133
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "15",
+      "source": [
+        134,
+        147
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "15",
+      "source": [
+        147,
+        147
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "15",
+      "source": [
+        134,
+        147
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "15",
+      "source": [
+        134,
+        147
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "16",
+      "source": [
+        148,
+        159
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "16",
+      "source": [
+        159,
+        159
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "16",
+      "source": [
+        148,
+        159
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "16",
+      "source": [
+        148,
+        159
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "17",
+      "source": [
+        160,
+        176
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "17",
+      "source": [
+        176,
+        176
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "17",
+      "source": [
+        160,
+        176
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "17",
+      "source": [
+        160,
+        176
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "17",
+      "source": [
+        160,
+        176
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "18",
+      "source": [
+        177,
+        190
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "18",
+      "source": [
+        189,
+        189
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "18",
+      "source": [
+        190,
+        190
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "18",
+      "source": [
+        177,
+        190
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "18",
+      "source": [
+        177,
+        190
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "19",
+      "source": [
+        191,
+        208
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "19",
+      "source": [
+        206,
+        206
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "19",
+      "source": [
+        207,
+        207
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "19",
+      "source": [
+        208,
+        208
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "19",
+      "source": [
+        191,
+        208
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "19",
+      "source": [
+        191,
+        208
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "19",
+      "source": [
+        191,
+        208
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "20",
+      "source": [
+        209,
+        223
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "20",
+      "source": [
+        223,
+        223
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "20",
+      "source": [
+        209,
+        223
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "20",
+      "source": [
+        209,
+        223
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "21",
+      "source": [
+        224,
+        235
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "21",
+      "source": [
+        234,
+        234
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "21",
+      "source": [
+        235,
+        235
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "21",
+      "source": [
+        224,
+        235
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "21",
+      "source": [
+        224,
+        235
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "22",
+      "source": [
+        236,
+        257
+      ]
+    },
+    {
+      "kind": "original_questions",
+      "chapter": "22",
+      "source": [
+        253,
+        253
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "22",
+      "source": [
+        236,
+        257
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "22",
+      "source": [
+        236,
+        257
+      ]
+    },
+    {
+      "kind": "answers",
+      "chapter": "22",
+      "source": [
+        236,
+        257
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "23",
+      "source": [
+        258,
+        280
+      ]
+    },
+    {
+      "kind": "summary",
+      "chapter": "23",
+      "source": [
+        258,
+        280
+      ]
+    },
+    {
+      "kind": "appendix",
+      "chapter": null,
+      "source": []
+    },
+    {
+      "kind": "appendix",
+      "chapter": null,
+      "source": []
+    },
+    {
+      "kind": "references",
+      "chapter": null,
+      "source": []
+    }
+  ],
+  "formula_page": 90,
+  "review_page": 91,
+  "references_page": 92
+}

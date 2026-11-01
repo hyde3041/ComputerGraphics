@@ -31,6 +31,9 @@
     <Project Path="out/build/windows-x64/Project1-17.vcxproj" Id="5ad8d5e1-cfc9-3183-b94e-cc560c73f7d1" />
     <Project Path="out/build/windows-x64/Project1-18.vcxproj" Id="aeb6917d-b83f-3deb-b215-a363d44fc436" />
     <Project Path="out/build/windows-x64/Project1-19.vcxproj" Id="7e95a184-9bb9-38ca-9ffb-959a17362e6b" />
+    <Project Path="out/build/windows-x64/Project1-20.vcxproj" Id="6abcab6a-7cc8-394a-a2f1-cb246086a319" />
+    <Project Path="out/build/windows-x64/Project1-21.vcxproj" Id="2A760B24-AC08-3E04-93EC-F20A72CF89BB" />
+    <Project Path="out/build/windows-x64/Project1-22.vcxproj" Id="11DA821A-CDD9-314D-BC37-128D34125CCC" />
   </Folder>
   <Folder Name="/CMake/">
     <Project Path="out/build/windows-x64/ZERO_CHECK.vcxproj" Id="4a3bfad9-2f87-3371-84aa-28471d04328f" />

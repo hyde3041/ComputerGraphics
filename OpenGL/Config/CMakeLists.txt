@@ -45,8 +45,11 @@ add_opengl_example(Project1-16 ../Project1/Project1-16.cpp Project1)
 add_opengl_example(Project1-17 ../Project1/Project1-17.cpp Project1)
 add_opengl_example(Project1-18 ../Project1/Project1-18.cpp Project1)
 add_opengl_example(Project1-19 ../Project1/Project1-19.cpp Project1)
+add_opengl_example(Project1-20 ../Project1/Project1-20.cpp Project1)
+add_opengl_example(Project1-21 ../Project1/Project1-21.cpp Project1)
+add_opengl_example(Project1-22 ../Project1/Project1-22.cpp Project1)
 # 실행 위치와 관계없이 프로젝트의 OBJ 폴더를 찾도록 경로를 전달한다.
-foreach(example Project1-17 Project1-18 Project1-19)
+foreach(example Project1-17 Project1-18 Project1-19 Project1-20 Project1-21 Project1-22)
     target_compile_definitions(${example} PRIVATE
         OBJ_DIRECTORY="${CMAKE_CURRENT_SOURCE_DIR}/../Project1/models"
     )

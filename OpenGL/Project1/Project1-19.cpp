@@ -44,16 +44,15 @@ glm::vec3 cameraUp;
 int cameraSelfDirection{};
 int cameraOrbitDirection{};
 
-const glm::vec3 initialColor[12]{
+const glm::vec3 initialColor[10]{
     { 0.18f, 0.30f, 0.20f }, // 바닥
     { 0.20f, 0.23f, 0.28f }, { 0.30f, 0.34f, 0.40f }, // 아래 몸체 둘
     { 0.25f, 0.65f, 0.35f }, // 중앙 몸체
     { 0.65f, 0.85f, 0.30f }, { 0.20f, 0.70f, 0.70f }, // 상부 몸체 둘
     { 0.85f, 0.40f, 0.15f }, { 0.30f, 0.45f, 0.95f }, // 포신 둘
-    { 0.95f, 0.85f, 0.20f }, { 0.90f, 0.65f, 0.20f }, // 깃대 둘
-    { 0.95f, 0.20f, 0.20f }, { 0.80f, 0.25f, 0.95f }  // 깃발 둘
+    { 0.95f, 0.85f, 0.20f }, { 0.90f, 0.65f, 0.20f }  // 깃대 둘
 };
-glm::vec3 bodyColor[12]{};
+glm::vec3 bodyColor[10]{};
 
 const char* vertexSource = R"(
 #version 330 core
@@ -247,7 +246,7 @@ void resetScene()
     glm::vec3 right = glm::normalize(glm::cross(cameraFront, glm::vec3(0, 1, 0)));
     cameraUp = glm::normalize(glm::cross(right, cameraFront));
     cameraSelfDirection = cameraOrbitDirection = 0;
-    for (int i = 0; i < 12; ++i) bodyColor[i] = initialColor[i];
+    for (int i = 0; i < 10; ++i) bodyColor[i] = initialColor[i];
 }
 
 glm::mat4 getViewProjection()
@@ -335,7 +334,7 @@ void keyCallback(GLFWwindow* window, int key, int, int action, int mods)
         cameraOrbitDirection = cameraOrbitDirection == direction ? 0 : direction;
     }
     else if (key == GLFW_KEY_O) {
-        for (int i = 0; i < 12; ++i) {
+        for (int i = 0; i < 10; ++i) {
             bodyColor[i] = glm::vec3(0.25f + (std::rand() % 76) / 100.0f,
                 0.25f + (std::rand() % 76) / 100.0f, 0.25f + (std::rand() % 76) / 100.0f);
         }
@@ -369,21 +368,9 @@ void drawScene()
         GLfloat side = i == 0 ? -1.0f : 1.0f;
         GLfloat upperHeight = i == 0 ? 0.24f : 0.20f;
         GLfloat upperDepth = i == 0 ? 0.56f : 0.64f;
-        GLfloat x, z;
-        // 먼저 앞/뒤로 벌어지고 -> 서로 지나가고 -> 원래 Z 위치로 돌아온다.
-        if (upperSwap < 0.25f) {
-            x = side * 0.48f;
-            z = side * 0.8f * upperSwap / 0.25f;
-        }
-        else if (upperSwap < 0.75f) {
-            x = side * 0.48f * (1.0f - 2.0f * (upperSwap - 0.25f) / 0.5f);
-            z = side * 0.8f;
-        }
-        else {
-            x = -side * 0.48f;
-            z = side * 0.8f * (1.0f - upperSwap) / 0.25f;
-        }
-        glm::mat4 upper = glm::translate(center, glm::vec3(x, 0.2f + upperHeight, z));
+        // X방향으로 곧바로 교환한다. 중간에는 두 상부 몸체가 겹친다.
+        GLfloat x = side * 0.48f * (1.0f - upperSwap * 2.0f);
+        glm::mat4 upper = glm::translate(center, glm::vec3(x, 0.2f + upperHeight, 0.0f));
         drawCube(viewProjection, upper, glm::vec3(0),
             glm::vec3(i == 0 ? 0.34f : 0.30f, upperHeight, upperDepth), 4 + i);
 
@@ -394,7 +381,6 @@ void drawScene()
         glm::mat4 flag = glm::translate(upper, glm::vec3(0, upperHeight, 0));
         flag = glm::rotate(flag, glm::radians(side * flagRotation), glm::vec3(1, 0, 0));
         drawCube(viewProjection, flag, glm::vec3(0, 0.4f, 0), glm::vec3(0.035f, 0.4f, 0.035f), 8 + i);
-        drawCube(viewProjection, flag, glm::vec3(0.18f, 0.68f, 0), glm::vec3(0.16f, 0.1f, 0.02f), 10 + i);
     }
 }
 
